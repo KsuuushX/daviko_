@@ -1,0 +1,16 @@
+.text-justify {
+    text-align: justify;
+}
+
+.bg-pink {
+    background-color: #fcdff3 !important;
+}
+
+.bg-pink-hover {
+    background-color: #422617 !important;
+    background-color: #fcdff3 !important;
+}
+
+.text-pink {
+    color: #422617 !important;
+}

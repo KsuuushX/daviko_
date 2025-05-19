@@ -1,0 +1,120 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+
+
+{% block banner %}
+<div id="myCarousel" class="carousel slide py-5" data-bs-interval="5000">
+    <div class="carousel-inner w-100">
+        <div class="carousel-item active w-100">
+            <div class="d-flex flex-row justify-content-center">
+                <img class="mx-auto" style="height: 550px" src="{% static 'app/content/i1.jpg' %}" alt="Первый слайд">
+            </div>
+            <div class="carousel-caption">
+                <p></p>
+                <a class="btn text-pink" href="https://www.blclinic.ru/articles/inektsionnaya_kosmetologiya_preimushchestva/"><strong>Читать далее</strong></a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-flex flex-row justify-content-center">
+                <img style="height: 550px" src="{% static 'app/content/i2.jpg' %}" alt="Второй слайд">
+            </div>
+            <div class="carousel-caption">
+                <p></p>
+                <a class="btn text-pink" href="https://www.repeat.ru/article/kak-pravilno-delat-massazh-guasha?utm_source=Yandex_direct_initiative&utm_medium=cpc&utm_campaign=Uni_Ya_Repeat_MB_Search_AlwaysOn25_Advise-Brandformance_Rus&utm_content=ch_yandex_direct%7Ccid_104301341%7Cgid_5370862676%7Cad_15621341622%7Cph_49243456460&utm_term=crt_0%7Cpst_premium%7Cps_1%7Csrct_search%7Csrc_none%7Cdevt_desktop%7Cret_49243456460%7Cgeo_25%7Ccf_0%7Cint_%7Ctgt_49243456460%7Cadd_no%7Ckey_---autotargeting&yclid=14488063364577361919"><strong>Читать далее</strong></a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="d-flex flex-row justify-content-center">
+                <img style="height: 550px" src="{% static 'app/content/i3.jpg' %}" alt="Третий слайд">
+            </div>
+            <div class="carousel-caption">
+                <p></p>
+                <a class="btn text-pink" href="https://www.letu.ru/blog/razbiraemsya-chto-nuzhno-znat-o-glinyanykh-maskakh"><strong>Читать далее</strong></a>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev opacity-100" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="arrow" style="width: 50px; height: 50px">
+                <span class="text-pink" aria-hidden="true">&#11164;</span>
+            </span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next opacity-100" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="arrow" style="width: 50px; height: 50px">
+                <span class="text-pink" aria-hidden="true">&#11166;</span>
+            </span>
+            <span class="visually-hidden">Next</span>
+        </button>
+</div>
+{% endblock %}
+
+{% block content %}
+<div>
+    <h2 class="py-4 text-center">Процедура недели — массаж</h2>
+    <div class="row">
+        <div class="col-5">
+            <img class="rounded-pill" style="width: 100%" src="{% static 'app/content/nedeli.jpg' %}" alt="Рецепт недели">
+        </div>
+        <div class="col">
+            <div class="d-flex h-100 align-items-center">
+                <div class="d-flex flex-column">
+                    <p>Массаж — это не только приятная процедура, но и мощный инструмент для поддержания здоровья и благополучия. Регулярные сеансы массажа помогают снять напряжение, улучшить кровообращение и способствуют расслаблению мышц.</p>
+                    <div>
+                        <a class="text-decoration-none text-pink" href="https://lethai.ru/stati/massazh-kamnyami-polza-stoun-terapii/"><strong>Посмотреть процедуру</strong></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div>
+    <h2 class="pt-5 pb-4 text-center">Популярные процедуры для волос</h2>
+
+    <div class="row">
+        <div class="col h-auto">
+            <div class="card h-100" style="width: 18rem;">
+      <img src="{% static 'app/content/botoks.jpg' %}" alt="Популярная процедура №1">
+        <h5 class="card-title text-center text-pink pt-3">Ботокс</h5>
+      <div class="card-body h-100 d-flex flex-column justify-content-between">
+        <p class="card-text text-justify">Ботокс для волос — это салонная процедура, которая моментально придает прядям здоровый и ухоженный вид.</p>
+        <div class="d-flex justify-content-center">
+            <a href="https://style.rbc.ru/beauty/60d087549a79475d08bb14dd" class="text-decoration-none text-pink"><strong>Посмотреть процедуру</strong></a>
+        </div>
+      </div>
+    </div>
+        </div>
+        <div class="col h-100">
+            <div class="card" style="width: 18rem;">
+      <img src="{% static 'app/content/keratin.jpg' %}" alt="Популярная процедура №2">
+                <h5 class="card-title text-center text-pink pt-3">Кератин</h5>
+      <div class="card-body h-100 d-flex flex-column justify-content-between">
+        <p class="card-text text-justify">Кератин — это главный строительный элемент волос, из этого белка состоит до 90% волос, на остальные 10% приходится вода, жиры и пигменты.</p>
+        <div class="d-flex justify-content-center">
+            <a href="https://style.rbc.ru/beauty/64995cc79a7947f7a199a47f" class="text-decoration-none text-pink"><strong>Посмотреть процедуру</strong></a>
+        </div>
+      </div>
+    </div>
+        </div>
+        <div class="col h-100">
+            <div class="card" style="width: 18rem;">
+      <img src="{% static 'app/content/holodnoe.jpg' %}" alt="Популярная процедура №3">
+      <h5 class="card-title text-center text-pink pt-3">Холодное восстановление</h5>
+      <div class="card-body h-100 d-flex flex-column justify-content-between">
+        <p class="card-text text-justify">Холодное восстановление волос — это процедура, направленная на работу с поврежденными прядями — секущимися, тусклыми и тонкими.</p>
+        <div class="d-flex justify-content-center">
+            <a href="https://www.loreal-paris.ru/blog/holodnoe-vosstanovlenie-volos" class="text-decoration-none text-pink"><strong>Посмотреть процедуру</strong></a>
+        </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<h2>Полезные ресурсы</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <p>Здесь собраны полезные ссылки и ресурсы, которые могут вам пригодиться.</p>
+
+        <ul>
+            {% for resource in resources %}
+            <li>
+                <h4><a href="{{ resource.url }}" target="_blank">{{ resource.title }}</a></h4>
+                <p>{{ resource.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

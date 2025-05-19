@@ -1,0 +1,21 @@
+{% load static %}
+
+<header class="bg-pink d-flex flex-row w-100">
+    <div class="d-flex flex-row justify-content-between w-100 py-3 container">
+        <a href="/" class="text-decoration-none text-2xl font-bold text-pink transition fs-3"><strong>DavikO</strong></a>
+        <div class="d-flex flex-row gap-4 align-items-center fs-5">
+            <a class="text-decoration-none text-pink" href="{% url 'home' %}">Главная</a>
+            <a class="text-decoration-none text-pink" href="{% url 'about' %}">О нас</a>
+            <a class="text-decoration-none text-pink" href="{% url 'blog' %}">Статьи</a>
+            <a class="text-decoration-none text-pink" href="{% url 'videopage' %}">Видео</a>
+            <a class="text-decoration-none text-pink" href="{% url 'links' %}">Полезная информация</a>
+            <a class="text-decoration-none text-pink" href="{% url 'anketa' %}">Обратная связь</a>
+            <a class="text-decoration-none text-pink" href="{% url 'contact' %}">Контакты</a>
+            {% if not user.is_authenticated %}
+            <a class="text-decoration-none text-danger" href="{% url 'login' %}">Вход</a>
+            {% else %}
+            <a class="text-decoration-none text-danger" href="{% url 'logout' %}">Выйти</a>
+            {% endif %}
+        </div>
+    </div>
+</header>

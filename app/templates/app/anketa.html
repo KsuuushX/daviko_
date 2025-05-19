@@ -1,0 +1,50 @@
+﻿{% extends "app/layout.html" %}
+
+{% load static %}
+
+{% block static %}
+<script src="{% static 'app/scripts/feedback.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    {% if form %}
+<form class="pt-3" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="text-decoration-none text-pink py-2 px-3 bg-pink align-middle rounded-pill" type="submit" id="submitBtn">Отправить</button>
+</form>
+    {% else %}
+<h3>Спасибо за ваш отзыв!</h3>
+<ul>
+    <li><strong>Имя:</strong> {{ data.name }}</li>
+    <li><strong>Email:</strong> {{ data.email }}</li>
+    <li><strong>Оценка:</strong> {{ data.rating }}</li>
+    <li><strong>Что улучшить:</strong> {{ data.improvements }}</li>
+    <li><strong>Отзыв:</strong> {{ data.feedback }}</li>
+</ul>
+    {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#submitBtn').mouseover(function () {
+            $(this).css('color', '#4a133d');
+        });
+
+        $('#submitBtn').mouseout(function () {
+            $(this).css('color', 'black');
+        });
+
+        $('input, textarea, select').focus(function () {
+            $(this).css('background-color', '#f2d0ea');
+        });
+
+        $('input, textarea, select').blur(function () {
+            $(this).css('background-color', 'white');
+        });
+    });
+</script>
+{% endblock %}

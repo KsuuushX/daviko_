@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'app/content/site.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="{% static 'app/scripts/scrypt.js' %}"></script>
+    {% block static %}
+    {% endblock %}
+</head>
+<body class="d-flex flex-column h-100">
+
+    {% include "app/components/header.html" %}
+
+    {% block banner %}{% endblock %}
+
+    <div class="flex-shrink-0">
+        <div class="container pb-3">
+        {% block content %}{% endblock %}
+    </div>
+    </div>
+
+    {% include "app/components/footer.html" %}
+
+</body>
+</html>
